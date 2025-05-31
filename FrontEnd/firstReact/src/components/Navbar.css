@@ -1,0 +1,10 @@
+.navbar{
+    display:flex;
+    justify-content: space-around;
+    background-color: rgb(43, 226, 83);
+
+}
+.element{
+    list-style: none;
+    font-size: xx-large;
+}
