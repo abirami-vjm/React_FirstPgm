@@ -14,6 +14,8 @@ export const Home = ({name,age,mark}) => {
          <Link to='/reducer'>Click here Reducer is open</Link><br></br>
            <Link to='/context'>Click here Context is open</Link><br></br>
            <Link to='/todos'>Click here ToDos page is open</Link>
+           <Link to='/login'>Click here Login  page is open</Link>
+             <Link to='/signup'>Click here SignUP page is open</Link>
     </div>
   )
 }

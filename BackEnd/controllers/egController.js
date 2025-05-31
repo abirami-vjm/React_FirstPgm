@@ -1,4 +1,5 @@
 const Todo= require('../models/todo')
+
 exports.getRoute=async(req,res)=>{
 const todoList = await Todo.find();
 res.json(todoList)

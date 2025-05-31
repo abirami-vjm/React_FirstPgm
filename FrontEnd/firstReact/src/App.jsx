@@ -11,6 +11,9 @@ import Ref from "./hooks/Ref";
 import Reducer from "./hooks/Reducer";
 import Context from "./hooks/Context";
 import Todos from "./pages/Todos";
+import Login from "../Auth/Login";
+import Signup from "../Auth/Signup";
+
 
  
 function App() {
@@ -34,6 +37,8 @@ function App() {
         <Route path='/reducer' element={<Reducer/>}/>
          <Route path='/context' element={<Context/>}/>
           <Route path='/todos' element={<Todos/>}/>
+          <Route path='/login' element={<Login/>}/>
+           <Route path='/signup' element={<Signup/>}/>
        </Routes>
       </>
   )
