@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
-
+const API ="https://react-firstpgm.onrender.com"
 
 const Todos = () => {
     const [todos,setTodos] =useState([])
@@ -11,7 +11,7 @@ const Todos = () => {
 
 
     const fetchTodos=async()=>{
-        const response=await axios.get('http://localhost:4000/get')
+        const response=await axios.get(`${API}/get`)
         setTodos(response.data)
     }
 
@@ -24,9 +24,9 @@ const Todos = () => {
     const handleAddorEdit=async(e)=>{
         e.preventDefault()
         if(editing){
-            await axios.put(`http://localhost:4000/put/${editing._id}`,{task})
+            await axios.put(`${API}/put/${editing._id}`,{task})
         }else{
-            await axios.post(`http://localhost:4000/post`,{task})
+            await axios.post(`${API}/post`,{task})
         }
         setTask('')
         setEditing(null)
@@ -35,11 +35,11 @@ const Todos = () => {
 
     }
     const handleDelete=async(id)=>{
-        await axios.delete(`http://localhost:4000/delete/${id}`)
+        await axios.delete(`${API}/delete/${id}`)
         fetchTodos();
     }
     const handleToggleComplete=async(todo)=>{
-        await axios.put(`http://localhost:4000/put/${todo._id}`,{
+        await axios.put(`${API}/put/${todo._id}`,{
             completed:!todo.completed,
         })
         fetchTodos()
